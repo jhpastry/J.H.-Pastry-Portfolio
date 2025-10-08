@@ -121,6 +121,8 @@ a:hover { text-decoration:underline; }
 
 .about-text img{margin-bottom:16px !important;}/* === Gallery grid styling === */
 #gallery-grid {
+  /* === Gallery Grid Styling === */
+#gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* strict 3-column layout */
   gap: 20px;
@@ -131,22 +133,25 @@ a:hover { text-decoration:underline; }
 
 .gallery-item {
   width: 100%;
+  aspect-ratio: 1/1; /* ensures all thumbnails stay perfectly square */
   border-radius: 12px;
   object-fit: cover;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Optional: responsive collapse to 2 or 1 columns */
+/* Optional: responsive collapse */
 @media (max-width: 1024px) {
   #gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 700px) {
   #gallery-grid {
     grid-template-columns: 1fr;
