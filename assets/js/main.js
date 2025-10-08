@@ -3,19 +3,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const folderPath = "assets/img/gallery/";
 
   const images = [
-    "01.jpg", "02.jpg", "03.jpg",
-    "Black and gold process photo.jpg",
-    "Petit fours 1.jpg",
-    "Oat Nougatine.jpg",
-    "PBJ monaka process photo.jpg",
-    "Pineapple gateau basque.jpg",
-    "New Tart Closeup.jpg",
-    "Chocolate Sphere.jpg",
-    "Canelé Texture Detail.jpg"
+    "applespec.jpg",
+    "autumnseries3.jpg",
+    "blackandgold.jpg",
+    "chocolatechoux .jpg",
+    "ispahan.jpg",
+    "matcha.jpg",
+    "newyears.jpg",
+    "pbj.jpg",
+    "petitsfour1.jpg",
+    "petitsfour3.jpg",
+    "petitsfour5.jpg",
+    "petitsfour6.jpg",
+    "pistachio.jpg",
+    "plating4.jpg",
+    "plating5.jpg",
+    "tatin.jpg",
+    "tofufah.jpg"
   ];
 
   galleryGrid.innerHTML = "";
 
+  // Create thumbnails
   images.forEach(file => {
     const img = document.createElement("img");
     img.src = folderPath + file;
@@ -28,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lightbox functionality
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxCaption = document.querySelector(".lightbox-caption");
+  const lightboxCaption = document.getElementById("lightbox-caption");
 
   document.querySelectorAll(".gallery-item").forEach(img => {
     img.addEventListener("click", () => {
